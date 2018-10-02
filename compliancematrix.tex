@@ -1,0 +1,436 @@
+\section{\label{sec:strain}Strain}
+The aim of this research project is the investigate the effect of strain on the A and g-tensors due to changing the distribution of electron and nuclear spins in $^{171}$Yb doped YSO. Mechanical strain is induced by applying stress to along a crystal axis similarly as for the Si:P sample in Ref.~\citep{PhysRevLett.120.167701}. This experiment aims to provide insight into the strain induced as a result of spin doped substrates with a patterned superconducting resonator on the surface being cooled to cryogenic temperatures. The compression of the materials used in fabrication as a function of temperature is expected to induce strain at the interface of substrates and perturb the bulk properties of the crystal. Relevant coefficients of thermal expansion for spin substrates and commonly used materials are presented in Table~\ref{tab:thermalexpansions} which has been advised by Ref.~\citep{mansirthesis}. 
+
+\begin{table}[h]
+ \begin{center}
+  \caption{Thermal expansion coefficients for material used for nanofabricated devices~\citep{Sato:14,doi:10.1063/1.323747,PhysRev.60.597,1674-1056-21-12-127103}.}
+  \label{tab:thermalexpansions}
+  \begin{tabular}{l | c}
+  \hline
+  Material & Thermal expansion coefficient \\
+  & at 300 K ($\times 10^{-6}$ K$^{-1}$) \\
+  \hline
+   Y$_{2}$SiO$_{5}$ & 6.3\\
+  Silicon & 2.6\\
+  Aluminum & 22.5\\
+  Aluminium oxide & 8.1\\
+  Niobium Nitride & 4.2\\
+  \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Therefore, understanding of relationship between stress and strain for this substrate is guided by referring to Ref.~\citep{doi:10.1002/crat.2170211204} and Ref.~\citep{wooster1973tensors}. In this section the compliance matrix which relates stress to strain is obtained in the conventional ($D1,D2,b$) co-ordinate frame.    
+
+\subsection{Stress and Strain Tensors}
+\label{sec:stressandstrain}
+Following Hooke's law, provided the stress applied to a solid object is below the elastic limit, the deformation of the object is reversible when no longer acted on by stress. In three-dimensions the variation of displacement $u_{i}$ with position $x_{i}$ in the object results is
+
+\begin{equation}
+\label{eq:generalmatrixnotation}
+e_{ij}=\frac{\partial u_{i}}{\partial x_{i}}, \;\;\;\; (i,j = 1,2,3).
+\end{equation} 
+
+\noindent The object undergoing rotation around a chosen axis $u_{i}$ with no strain sets the condition that any displacement perpendicular to the axis is $u_{i}x_{i}=0$ and thus requires that $e_{ij}$ is antisymmetric. The stiffness tensor $[S]$ is a 4th-rank tensor which relates the 2nd-rank stress $[\sigma]$ and strain $[\epsilon]$ tensors, in the component form as $\sigma_{ij}=c_{ijkl}\epsilon_{kl}$ where $ijkl=1,2,3$. This results from the inability to describe normal and shear stress/strain components by a single vector. 
+
+The elements of tensors, $[\sigma]$ and $[\epsilon]$ given in Eq.~\ref{eq:stresstensor} and Eq.~\ref{eq:straintensor}, along the matrix diagonal are acting normal to the crystal surface and the off-diagonal elements give the shear components:     
+
+\begin{equation}
+\label{eq:stresstensor}
+[\sigma]=\begin{bmatrix}
+\sigma_{11} & \sigma_{21} & \sigma_{31} \\ 
+\sigma_{12} & \sigma_{22}  & \sigma_{32}\\ 
+\sigma_{13} & \sigma_{23} & \sigma_{33}
+\end{bmatrix},
+\end{equation} 
+
+\begin{equation}
+\label{eq:straintensor}
+[\epsilon]=\begin{bmatrix}
+\epsilon_{11} & \epsilon_{21} & \epsilon_{31} \\ 
+\epsilon_{12} & \epsilon_{22}  & \epsilon_{32}\\ 
+\epsilon_{13} & \epsilon_{23} & \epsilon_{33}.
+\end{bmatrix}.
+\end{equation} 
+
+
+\noindent There are initially 81 independent stiffness elements of $c_{ijkl}$. However, by definition $\epsilon$ is the symmetric part of $e_{ij}$. Therefore, the stress tensor simplifies such that if $i\neq j$ then $\epsilon_{ij} = \epsilon_{ji}$. Similarly the stress tensor is also symmetric. Thus considering cases where only normal or a pair of shear components are the nonzero elements of the tensor, this results in the conditions that $c_{ijkl}=c_{jilk}$ and $c_{ijkl}=c_{jilk}$. 
+
+Consequently the number of independent components of $c_{ijkl}$ reduces to 36. Additionally the compliance tensor $s$ in component form is given as $\epsilon_{ij}=s_{ijkl}\sigma_{kl}$ and is simplified to 36 independent components. Similarly the compliance tensor $[S]$, which relates $[\epsilon]$ to $[\sigma]$ as $\epsilon_{ij}=s_{ijkl}\sigma_{kl}$, index symmetry is $s_{ijkl}=s_{jilk}$ and $s_{ijkl}=s_{jilk}$. Due to the symmetry of $[C]$ (and $[S]$) the stress and strain components can be converted into the matrix (or Voigt) notation and then into vector notation such that:
+
+\begin{equation}
+\label{eq:stresstensorsimiplified}
+\begin{bmatrix}
+\sigma_{11} & \sigma_{12} & \sigma_{13} \\ 
+\sigma_{12} & \sigma_{22}  & \sigma_{23}\\ 
+\sigma_{13} & \sigma_{23} & \sigma_{33}
+\end{bmatrix}\leftrightarrow 
+\begin{bmatrix}
+\sigma_{1} & \sigma_{6} & \sigma_{5} \\ 
+\sigma_{6} & \sigma_{2}  & \sigma_{4}\\ 
+\sigma_{5} & \sigma_{4} & \sigma_{3}
+\end{bmatrix} \leftrightarrow 
+\begin{bmatrix}
+\sigma_{1}\\ 
+\sigma_{2}\\ 
+\sigma_{3}\\ 
+\sigma_{4}\\ 
+\sigma_{5}\\ 
+\sigma_{6}
+\end{bmatrix},
+\end{equation} 
+
+\begin{equation}
+\label{eq:straintensorsimplified}
+\begin{bmatrix}
+\epsilon_{11} & \epsilon_{12} & \epsilon_{13} \\ 
+\epsilon_{12} & \epsilon_{22}  & \epsilon_{23}\\ 
+\epsilon_{13} & \epsilon_{23} & \epsilon_{33}
+\end{bmatrix} \leftrightarrow 
+\begin{bmatrix}
+\epsilon_{1} & \frac{1}{2}\epsilon_{6} & \frac{1}{2}\epsilon_{5} \\ 
+\frac{1}{2}\epsilon_{6} & \epsilon_{2}  & \frac{1}{2}\epsilon_{4}\\ 
+\frac{1}{2}\epsilon_{5} & \frac{1}{2}\epsilon_{4} & \epsilon_{3}
+\end{bmatrix} \leftrightarrow 
+\begin{bmatrix}
+\epsilon_{1}\\ 
+\epsilon_{2}\\ 
+\epsilon_{3}\\ 
+\epsilon_{4}\\ 
+\epsilon_{5}\\ 
+\epsilon_{6}
+\end{bmatrix},
+\end{equation}
+
+\noindent where for clarity $\bm{\sigma}$ and $\bm{\epsilon}$ will refer to vector notation such that ie. $\bm{\epsilon}=\begin{bmatrix} \epsilon_{1} & \epsilon_{2} & \epsilon_{3} & \epsilon_{4} & \epsilon_{5} & \epsilon_{6} \\ \end{bmatrix}^{T}$.
+
+
+It is clear the factors of $\frac{1}{2}$ in Eq.~\ref{eq:straintensorsimplified} arise selecting $\epsilon_{ij}$ for certain values of $i,j$ and writing out $\epsilon_{ij}=s_{ijkl}\sigma_{kl}$ for $k,l=1,2,3$ then transforming to the matrix notation and using the symmetry of the $s_{ijkl}$ subscripts. Therefore, the general form in the matrix notation is given as: 
+
+\begin{equation}
+\label{eq:generalmatrixnotation}
+\sigma_{i} = c_{ij}\epsilon_{j} \;\;\;\; (i,j = 1,2...,6),
+\end{equation} 
+
+\noindent where the 6$\times$6 stiffness matrix, $[c]$ and the 6$\times$6 compliance matrix, $[s]$ are related as $[s]=[c]^{-1}$. 
+
+The number of independent matrix elements further reduces to 21 as $[c]$ is determined to be symmetric. Derivation of this property is obtained by equating the change in the work done $dW=\sigma_{i}d\epsilon_{i}$, by applying a stress to produce a reversible and isotropic strain on the face of a cubic crystal, to the increase Helmholtz free energy in matrix notation as:
+
+\begin{equation}
+\label{eq:freeenergyequate}
+d\psi =c_{ij}\sigma_{j}d\epsilon_{i},
+\end{equation} 
+
+
+\noindent then differentiating each side of Eq.~\ref{eq:freeenergyequate} by $\epsilon_{j}$ where the order of differentiating $\Psi$ is unimportant. This results in the symmetry $c_{ij}=c_{ji}$ and reciprocal matrix is also symmetric such that $s_{ij}=s_{ji}$.  
+
+\subsection{Monoclinic stiffness matrix}
+
+The number of independent nonzero elements of $c_{ij}$ further reduces depending on the symmetry of the crystal. Since YSO is anisotropic and monoclinic the number of nonzero independent elements of $[c]$ is 13. This is determined as the energy density function: 
+
+\begin{equation}
+\label{eq:energyW}
+W=\frac{1}{2}c_{ij}\epsilon_{i}\epsilon_{j},
+\end{equation}
+
+\noindent must be invariant under coordinate transformation where $c_{ij}=c_{ji}$. Therefore, If we consider the crystal in the ($D1,b,D2$) frame, then $D1-D2$ is the plane around the symmetry b-axis. The change of axis is given as: 
+
+\begin{equation}
+\label{eq:planofsymmetry}
+D1'=D1, \;\;\;\; b' = -b, \;\;\;\; \textrm{and} \;\;\;\; D2'=D2.
+\end{equation}
+
+One way to transform between reference frame in the full tensor notation is given as $\epsilon_{ij}=a_{ki}a_{lj}\epsilon_{ij}$ where for ie. $a_{ij}$, which is the partial differentiation of crystal axis $i$ with respect to crystal axis $j$. Thus: 
+
+\begin{equation}
+\label{eq:apartialdiff}
+a_{ij}=\frac{\partial i}{\partial j}=\delta_{ij}, 
+\end{equation}
+
+\noindent where $\frac{\partial i}{\partial j}=-\delta_{ij}$ if $i,j=b$ and $i\neq j$, and $\frac{\partial i}{\partial j}=\delta_{ij}$ if $i,j=D1,D2$. Additionally, for $\epsilon_{4},\epsilon_{5}$ and $\epsilon_{6}$ conversion back to $\epsilon_{ij}$ notation is given by Eq.~\ref{eq:straintensorsimplified}. Therefore, the $[c]$ matrix for the crystal symmetry is: 
+
+
+\begin{equation}
+\label{eq:13elementC}
+[c]=\begin{bmatrix}
+c_{11} & c_{12} & c_{13} & 0 & c_{15} & 0 \\
+& c_{22} & c_{23} & 0 & c_{25} & 0 \\
+& & c_{33} & 0 & c_{35} & 0 \\
+& Sym. & & c_{44} & 0 & c_{46} \\
+& & & & c_{55} & 0 \\
+& & & & & c_{66} \\
+\end{bmatrix} 
+\end{equation}
+
+where there are 13 nonzero independent elements. 
+
+% space group?
+
+\subsection{\label{sec: YSO stiffness matrix}{YSO stiffness matrix}}
+
+%The lattice structural parameters such as the crystallographic axis, $a$,$b$ and $c$, of the unit cell, in an appropriate space group, are determined based on density functional theory with localised density approximation and ultrasoft pseudopotentials. Homogeneous strain is applied and optimisation of the atomic positioning for the established unit cell allows linear fitting of the stress resulting from the strain. Therefore the stiffness matrix can be determined. The stiffness matrix elements are referred to as second-order elastic coefficients since they provide the second derivative of the total energy with respect to atomic displacements~\citep{0953-8984-13-2-302,doi:10.1111/jace.12764}. %The lattice structural parameters such as the crystallographic axis, $a$,$b$ and $c$, of the unit cell, in an appropriate space group, are determined based on density functional theory with localised density approximation and ultrasoft pseudopotentials~\citep{0953-8984-13-2-302}. 
+
+Bravais lattices are made up indefinite unit cells defined by the lattice vectors of length, $a$, $b$ and $c$ and related through arbitrary angles, $\alpha$, $\beta$ and $\gamma$. There are 230 space groups which result from the combination of Bravais lattices and symmetry operations. Comparison of the $C2/c$ with the $I2/a$ space group is shown in Fig~\ref{fig:crystalspacegroups} where the lattice parameters for $I2/a$ is given in Table.~\ref{tab:I2alatticeparam}. The lattice structural parameters such as the crystallographic axis, $a$,$b$ and $c$, of the unit cell, in an appropriate space group, are determined based on density functional theory with localised density approximation and ultrasoft pseudopotentials~\citep{0953-8984-13-2-302}. Homogeneous strain is applied and optimisation of the atomic positioning, for the established unit cell, allows linear fitting of the stress resulting from the strain enables the stiffness matrix to be determined. The stiffness matrix elements are referred to as second-order elastic coefficients since they provide the second derivative of the total energy with respect to atomic displacements~\citep{doi:10.1111/jace.12764}. Theoretical second-order elastic coefficients are given in Table~\ref{tab:elasticcoefficients} in GPa for the corresponding Y$_{2}$SiO$_{5}$ unit cell in the $B2/b$~\citep{doi:10.1111/jace.12764} and $C2/c$~\citep{Ceramics} space group for comparison. 
+
+The most conventional space group to describe the unit cell of a monoclinic crystal is the $C2/c$ which is $C$-face centered lattice~\citep{conventionalcells}. Therefore, the $C2/c$ elastic coefficients are presented in Eq.~\ref{eq:stiffnessmatrixC} with the corresponding lattice parameters compared to experimentally determined values in Table~\ref{tab:latticeparam}.Due to the ambiguity of the calculated [$c$] reference frame, documentation for the tool ElaStic\citep{ElaStic} which can be used to compute second-order elastic coefficients was consulted. This revealed for a monoclinic crystal with $b$ as the unique axis the Cartesian coordinate frame is $\textbf{a}=(a,0,0)$, $\textbf{b}=(0,b,0)$ and $\textbf{c}=(c \cos{\beta},0,c \sin{\beta})$. 
+
+\begin{table}[h]
+ \begin{center}
+  \caption{Y$_{2}$SiO$_{5}$ $C2/c$ lattice parameters}
+  \label{tab:latticeparam}
+  \begin{tabular}{l | c c}
+  \hline
+  Lattice constants & Experimental~\citep{Cong:ko5080} & Theoretical~\citep{Ceramics} \\
+  \hline
+  a ($\AA$) & 14.37 & 14.25 \\
+  b ($\AA$) & 6.71 & 6.59 \\
+  c ($\AA$) & 10.39 & 10.23 \\
+  $\beta$ ($\deg$) & 122.2 & 122.3 \\
+  \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+
+
+The stiffness matrix in the $C2/c$ space group and $(\textbf{a},\textbf{b},\textbf{c})$ is
+
+
+\begin{equation}
+\label{eq:stiffnessmatrixC}
+[c]=
+\begin{bmatrix}
+226 & 59 & 88 & 0 & 5 & 0 \\
+& 156 & 27 & 0 & -0.3 & 0 \\
+& & 201 & 0 & -0.2 & 0 \\
+& Sym. & & 44 & 0 & 10 \\
+& & & & 63 & 0 \\
+& & & & & 67 \\
+\end{bmatrix}_{(\textbf{a},\textbf{b},\textbf{c})}.
+\end{equation}
+
+However since the sample is cut along the optical axis and uniaxial stress will be applied along each of those axis, $[c]$ must be transformed accordingly. The orientation of the $(D1,b,D2)$ reference frame with respect to the $C2/c$ crystallographic axes is given in Fig.~\ref{fig:D1bD2abc} where lattice parameter $b$ is parallel with respect to the optical axis $b$. Thus $\theta=$23.8 $\deg$ anticlockwise rotation around the y-axis is required to rotate the coordinate frame from $(\textbf{a},\textbf{b},\textbf{c})$ to $(D1,b,D2)$. Therefore the rotation matrix $R_{m}$ is:
+
+\begin{equation}
+\label{eq:rotateatoD1}
+\begin{bmatrix}
+r_{11} & r_{12} & r_{13} \\
+r_{21} & r_{22} & r_{23} \\
+r_{31} & r_{32} & r_{33} \\
+\end{bmatrix}=
+\begin{bmatrix}
+\cos{(\beta')} & 0 & \sin{(\beta')} \\
+0 & 1 & 0 \\
+-\sin{(\beta')} & 0 & cos{(\beta')}
+\end{bmatrix}
+\end{equation}
+
+\noindent where $\beta'=360 \deg - \beta$. 
+
+
+Then the second-rank tensor transformation between $[\epsilon]$ in the $(\textbf{a},\textbf{b},\textbf{c})$ frame and $[\epsilon^{'}]$ in the (D1,b,D2) frame can be obtain following Eq.~\ref{eq:epsilontransformation} 
+
+\begin{equation}
+\label{eq:epsilontransformation}
+\epsilon_{ij}^{'}=r_{ik}r_{jl}\epsilon_{kl},
+\end{equation}
+
+where for example $\epsilon_{11} = r_{11}^{2}\epsilon_{11} + r_{12}^{2}\epsilon_{22} + r_{13}^{2}\epsilon_{13} +2r_{12}r_{13}\epsilon_{23} + 2r_{11}r_{13}\epsilon_{13} + 2r_{11}r_{12}\epsilon_{12}$. Then similarly as in Eq.~\ref{eq:straintensorsimplified} in matrix notation this becomes $\epsilon_{1}=r_{11}^{2}\epsilon_{1} + r_{12}^{2}\epsilon_{2} + r_{13}^{2}\epsilon_{3} + r_{12}r_{13}\epsilon_{4} + r_{11}r_{13}\epsilon_{5} + r_{11}r_{12}\epsilon_{6}$. The transformation to matrix notation for ie. $\epsilon_{12}=\frac{1}{2}\epsilon_{6}$ must not be neglected. Since it can be shown that $[\sigma]=[T_{\epsilon}][\sigma^{'}]$, the transformation tensor $[T_{\epsilon}]$ in the matrix notation is: 
+
+\begin{equation}
+\label{eq:transformationmatrix}
+\begin{bmatrix}
+r_{11}^{2} & r_{12}^{2} & r_{13}^{2} & r_{12}r_{13} & r_{11}r_{13} & r_{11}r_{12} \\
+r_{21}^{2} & r_{22}^{2} & r_{23}^{2} & r_{21}r_{23} & r_{21}r_{23} & r_{21}r_{22} \\
+r_{31}^{2} & r_{32}^{2} & r_{33}^{2} & r_{32}r_{33} & r_{31}r_{33} & r_{31}r_{32} \\
+2r_{21}r_{31} & 2r_{22}r_{32} & 2r_{23}r_{33} & (r_{22}r_{33}+r_{23}r_{32}) & (r_{21}r_{33}+r_{23}r_{31}) & (r_{21}r_{32}+r_{22}r_{31}) \\
+2r_{11}r_{31} & 2r_{12}r_{32} & 2r_{13}r_{33} & (r_{12}r_{33}+r_{13}r_{32}) & (r_{11}r_{33}+r_{13}r_{31}) & (r_{11}r_{32}+r_{12}r_{31}) \\
+2r_{11}r_{21} & 2r_{12}r_{22} & 2r_{12}r_{23} & (r_{12}r_{23}+r_{13}r_{22}) & (r_{13}r_{22}+r_{13}r_{21}) & (r_{11}r_{22}+r_{12}r_{21}) \\
+\end{bmatrix}.
+\end{equation}
+
+
+To check Eq.~\ref{eq:stiffnessmatrixD1bD2} produces sensible results a simple $R_{y}(\pi/2)$ rotation was tested initially.
+
+\begin{equation}
+\label{eq:stiffnessmatrixD1bD2}
+[c]_{(D1,b,D2)}=[T_{\epsilon}][c]_{(\textbf{a},\textbf{b},\textbf{c})}[T_{\epsilon}]^{T}.
+\end{equation}
+
+$[c]_{(D1,b,D2)}$ is then computed as: 
+
+\begin{equation}
+\label{eq:stiffnessmatrixC}
+[c]_{(D1,b,D2)}=\begin{bmatrix}
+171 & 36 & 113 & 0 & 22.5 & 0 \\
+& 156 & 43.5 & 0 & -28.8 & 0 \\
+& & 139.3 & 0 & -33.1 & 0 \\
+& Sym. & & 51.4 & 0 & -14.7 \\
+& & & & 220.4 & 0 \\
+& & & & & 59.6 \\
+\end{bmatrix}_{(D1,b,D2)}.
+\end{equation}
+
+\noindent Furthermore, since $[g]$ and $[A]$ are conventionally presented in the $(D1,D2,b)$ coordinate frame~\citep{PhysRevB.94.155116}, it is advantageous for Eq.\ref{eq:stiffnessmatrixC} to be transformed to this frame. In this case $R_{m}$ is:
+
+\begin{equation}
+\label{eq:rotateatoswitchbD2axis}
+\begin{bmatrix}
+r_{11} & r_{12} & r_{13} \\
+r_{21} & r_{22} & r_{23} \\
+r_{31} & r_{32} & r_{33} \\
+\end{bmatrix}=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+\end{bmatrix},
+\end{equation}
+
+\noindent which allows conversion of $(D1,b,D1)\leftrightarrow (D1,D2,b)$. Similarly, using Eq.~\ref{eq:transformationmatrix} and Eq.~\ref{eq:stiffnessmatrixD1bD2}, $[c]_{(D1,b,D2}$ is transformed to:
+
+\begin{equation}
+\label{eq:stiffnessmatrixCD1D2b}
+[c]_{(D1,D2,b)}=\begin{bmatrix}
+171 & 113 & 36 & 0 & 0 & 22.5 \\
+& 139.3 & 43.5 & 0 & 0 & -33.1 \\
+& & 156 & 0 & 0 & 28.8 \\
+& Sym. & & 51.4 & -14.7 & 0 \\
+& & & & 59.6 & 0 \\
+& & & & & 220.4 \\
+\end{bmatrix}_{(D1,D2,b)}.
+\end{equation}.
+
+\noindent Finally in this experiment a unaxial linear stress ($\epsilon_{1}, \epsilon_{2}$ or $\epsilon_{3}$) is applied to the crystal, thus $[s]_{(D1,D2,b)}$ must be to calculated to determine $\bm{\epsilon}_{D1,D2,b}$. Therefore matrix inversion of $[c]$ provides:
+
+\begin{equation}
+\label{eq:stiffnessmatrixCD1D2b}
+[s]_{(D1,D2,b)}=\begin{bmatrix}
+14.8 & -12.6 & -0.5 & 0 & 0 & -3.5 \\
+& 18.9 & -1.6 & 0 & 0 & 3.9 \\
+& & 7.1 & 0 & 0 & 0.7 \\
+& Sym. & & 20.9 & 5.2 & 0 \\
+& & & & 18.0 & 0 \\
+& & & & & 5.6 \\
+\end{bmatrix}_{({D1},{D2},{b})}.
+\end{equation}.
+
+in units of pPa$^{-1}$. Now using Eq.~ref{eq:stiffnessmatrixCD1D2b} the induced $\bm{\epsilon}_{(D1,D2,b)}$ can be computed stress applied to each dielectric axis. The result for each case is always three nonzero linear terms and a nonzero shear term.   
+
+
+\section{Spin-Strain Interaction}
+Now that the relationship between strain and stress can be successfully calculated, the ability to relate the strain to the spin Hamiltonian components is considered. Since $[A]$ and $[g]$ are additionally second-order symmetric tensors and based on the conditions discussed in Sec.~\ref{sec:stressandstrain} it can be determined that matrices, $[\mathcal{G}]$ and $[\mathcal{A}]$, relating $[\sigma]$ to $[g]$ and $[A]$ will also be symmetric. Further reduction beyond 21 independent matrix elements is not possible due to trivial $C1$ symmetry of the Y$^{+3}$ ion sites. Eq.~\ref{eq:gtosigma} and Eq.~\ref{eq:Atosigma} relate vectors $\bm{g}$ and $\bm{A}$ to $\bm{\epsilon}$:
+
+
+
+\begin{equation}
+\label{eq:gtosigma}
+g=\begin{bmatrix}
+g_{1} \\
+g_{2} \\
+g_{3} \\
+g_{4} \\
+g_{5} \\
+g_{6} \\
+\end{bmatrix}=
+\begin{bmatrix}
+\mathcal{G}_{11} & \mathcal{G}_{12} & \mathcal{G}_{13} & \mathcal{G}_{14}
+& \mathcal{G}_{15} & \mathcal{G}_{16} \\
+& \mathcal{G}_{22} & \mathcal{G}_{23} & \mathcal{G}_{24} & \mathcal{G}_{25} & \mathcal{G}_{26} \\
+& & \mathcal{G}_{33} & \mathcal{G}_{34} & \mathcal{G}_{35} & \mathcal{G}_{36} \\
+& Sym. & & \mathcal{G}_{44} & \mathcal{G}_{45} & \mathcal{G}_{46} \\
+& & & & \mathcal{G}_{55} & \mathcal{G}_{56} \\
+& & & & & \mathcal{G}_{66} \\
+\end{bmatrix}_{(D1,D2,b)}
+\begin{bmatrix}
+\epsilon_{1} \\
+\epsilon_{2} \\
+\epsilon_{3} \\
+\epsilon_{4} \\
+\epsilon_{5} \\
+\epsilon_{6} \\
+\end{bmatrix},
+\end{equation}  
+
+  
+\begin{equation}
+\label{eq:Atosigma}
+A=\begin{bmatrix}
+A_{1} \\
+A_{2} \\
+A_{3} \\
+A_{4} \\
+A_{5} \\
+A_{6} \\
+\end{bmatrix}=
+\begin{bmatrix}
+\mathcal{A}_{11} & \mathcal{A}_{12} & \mathcal{A}_{13} & \mathcal{A}_{14}
+& \mathcal{A}_{15} & \mathcal{A}_{16} \\
+& \mathcal{A}_{22} & \mathcal{A}_{23} & \mathcal{A}_{24} & \mathcal{A}_{25} & \mathcal{A}_{26} \\
+& & \mathcal{A}_{33} & \mathcal{A}_{34} & \mathcal{A}_{35} & \mathcal{A}_{36} \\
+& Sym. & & \mathcal{A}_{44} & \mathcal{A}_{45} & \mathcal{A}_{46} \\
+& & & & \mathcal{A}_{55} & \mathcal{A}_{56} \\
+& & & & & \mathcal{A}_{66} \\
+\end{bmatrix}_{(D1,D2,b)}
+\begin{bmatrix}
+\epsilon_{1} \\
+\epsilon_{2} \\
+\epsilon_{3} \\
+\epsilon_{4} \\
+\epsilon_{5} \\
+\epsilon_{6} \\
+\end{bmatrix}.
+\end{equation} 
+
+Similarly as in Eq.~\ref{eq:straintensorsimplified}, the following transformation of $[g]$ and $[A]$ completed to obtain the vector notation:
+
+\begin{equation}
+\label{eq:gsimplified}
+\begin{bmatrix}
+g_{11} & g_{12} & g_{13} \\ 
+g_{12} & g_{22}  & g_{23}\\ 
+g_{13} & g_{23} & g_{33}
+\end{bmatrix} \leftrightarrow 
+\begin{bmatrix}
+g_{1} & \frac{1}{2}g_{6} & \frac{1}{2}g_{5} \\ 
+\frac{1}{2}g_{6} & g_{2}  & \frac{1}{2}g_{4}\\ 
+\frac{1}{2}g_{5} & \frac{1}{2}g_{4} & g_{3} \\
+\end{bmatrix} \leftrightarrow 
+\begin{bmatrix}
+g_{1}\\ 
+g_{2}\\ 
+g_{3}\\ 
+g_{4}\\ 
+g_{5}\\ 
+g_{6}
+\end{bmatrix},
+\end{equation}
+
+and
+
+\begin{equation}
+\label{eq:Asimplified}
+\begin{bmatrix}
+A_{11} & A_{12} & A_{13} \\ 
+A_{12} & A_{22}  & A_{23}\\ 
+A_{13} & A_{23} & A_{33}
+\end{bmatrix} \leftrightarrow 
+\begin{bmatrix}
+A_{1} & \frac{1}{2}A_{6} & \frac{1}{2}A_{5} \\ 
+\frac{1}{2}A_{6} & A_{2}  & \frac{1}{2}A_{4}\\ 
+\frac{1}{2}A_{5} & \frac{1}{2}A_{4} & A_{3} \\
+\end{bmatrix}_{(D1,b,D2)} \leftrightarrow 
+\begin{bmatrix}
+A_{1}\\ 
+A_{2}\\ 
+A_{3}\\ 
+A_{4}\\ 
+A_{5}\\ 
+A_{6}
+\end{bmatrix}.
+\end{equation}
+
+Due to low symmetry of YSO and Y$^{+3}$ ions, each element of $\bm{g}$ and $\bm{A}$ provides an expression containing linear and tensile $\bm{\epsilon}$ elements multiplied by unknown $[\mathcal{G}]$ and $[\mathcal{A}]$ coefficients. In order to gain information about the coefficients a select few elements would have to be dominant such that many coefficients could be approximated as zero.
+
+
